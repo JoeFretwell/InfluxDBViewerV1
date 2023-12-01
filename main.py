@@ -95,7 +95,7 @@ def showtable():
     |> range(start: -{timeEntry}h)\
     |> filter(fn:(r) => r._measurement == "{measurementEntry}")""".format(bucket = bucket, timeEntry = timeEntryget, measurementEntry = measurementEntry.get())
     global result
-    result = client.query_api().query_data_frame(org="test", query=query)
+    result = client.query_api().query_data_frame(org=org, query=query)
 
 
     #make table
